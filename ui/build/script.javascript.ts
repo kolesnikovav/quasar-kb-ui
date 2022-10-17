@@ -154,7 +154,7 @@ function addExtension (filename: string, ext = 'min') {
 
 function buildEntry (config: any) {
   return rollup
-    .rollup(config?.rollup?.input)
+    .rollup(config.rollup.input)
     .then(bundle => bundle.generate(config.rollup.output))
     .then(({ output }) => {
       const code = config.rollup.output.format === 'umd'
