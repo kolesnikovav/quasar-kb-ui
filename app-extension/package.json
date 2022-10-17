@@ -1,0 +1,22 @@
+{
+  "name": "quasar-app-extension-kb-ui",
+  "version": "0.0.1",
+  "description": "A Quasar App Extension",
+  "author": "Aleksandr Kolesnikov <a9104656059@yandex.ru>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "homepage": "",
+  "dependencies": {
+    "quasar-ui-kb-ui": "^0.0.1"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  }
+}
