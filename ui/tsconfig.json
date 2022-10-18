@@ -6,7 +6,8 @@
       "allowJs": true,
       "esModuleInterop": true,
       "module": "esnext",
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "declaration": true,
     },
     "ts-node": {
       //https://stackoverflow.com/questions/58273824/typescript-cannot-use-import-statement-outside-a-module

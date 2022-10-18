@@ -1,11 +1,13 @@
-import { h } from 'vue'
-import { QBadge } from 'quasar'
+import { h, PropType, defineProps } from 'vue'
+import { QTable, QTableProps, QTableSlots } from 'quasar'
 
 export default {
-  name: 'MyComponent',
-
+  name: 'QAdvTable',
+  props: {
+    ...QTableProps,
+  },
   setup () {
-    return () => h(QBadge, {
+    return () => h(QTable, {
       class: 'MyComponent',
       label: 'MyComponent'
     })
