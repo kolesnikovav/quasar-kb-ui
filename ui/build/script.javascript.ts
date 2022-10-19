@@ -12,9 +12,14 @@ import {version } from '../package.json';
 import { buildUtils } from './utils';
 import { config as buildConf} from './config';
 import typescript from 'rollup-plugin-typescript2';
+import keysTransformer from 'ts-transformer-keys/transformer';
+import { Program } from 'typescript';
 
 const rollupPlugins = [
-  typescript(),
+  typescript({ transformers: [service => ({
+    before: [ keysTransformer(service.getProgram() as Program) ],
+    after: []
+  })] }),
   replace({
     preventAssignment: false,
     values: {

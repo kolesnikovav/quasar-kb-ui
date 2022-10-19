@@ -6,7 +6,10 @@
       "allowJs": true,
       "esModuleInterop": true,
       "module": "esnext",
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "plugins": [
+        { "transform": "ts-transformer-keys/transformer" }
+      ]
     },
     "ts-node": {
       //https://stackoverflow.com/questions/58273824/typescript-cannot-use-import-statement-outside-a-module
@@ -14,6 +17,6 @@
         // same as the --compilerOptions flag and the TS_NODE_COMPILER_OPTIONS environment variable
         "compilerOptions": {
           "module": "commonjs"
-      },      
+      },
     }
   }

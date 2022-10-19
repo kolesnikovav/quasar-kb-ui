@@ -1,13 +1,18 @@
 {
     "extends": "@quasar/app-webpack/tsconfig-preset",
+    "exclude": ["node_modules","dev","build", "dist"],
+    "include": ["src"],
     "compilerOptions": {
       "baseUrl": ".",
-      "noEmit": true,
+      "noEmit": false,
       "allowJs": true,
       "esModuleInterop": true,
       "module": "esnext",
       "resolveJsonModule": true,
       "declaration": true,
+      "plugins": [
+        { "transform": "ts-transformer-keys/transformer" }
+      ],
     },
     "ts-node": {
       //https://stackoverflow.com/questions/58273824/typescript-cannot-use-import-statement-outside-a-module

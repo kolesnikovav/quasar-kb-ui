@@ -15,7 +15,8 @@
     "dev:electron": "cd dev && yarn 'dev:electron' && cd ..",
     "build": "ts-node-esm build/index.ts",
     "build:js": "ts-node-esm build/script.javascript.ts",
-    "build:css": "ts-node-esm build/script.css.ts"
+    "build:css": "ts-node-esm build/script.css.ts",
+    "build:types": "tsc --pretty --emitDeclarationOnly -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -50,7 +51,10 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "rtlcss": "^2.6.1",
     "sass": "1.32.0",
+    "ts-loader": "^9.4.1",
     "ts-node": "^10.9.1",
+    "ts-transformer-keys": "^0.4.3",
+    "ttypescript": "^1.5.13",
     "typescript": "^4.8.4",
     "uglify-js": "^3.13.3",
     "vue": "^3.0.0",

@@ -3,6 +3,7 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const keysTransformer = require('ts-transformer-keys/transformer').default;
 
 module.exports = function (ctx) {
   return {
@@ -56,7 +57,8 @@ module.exports = function (ctx) {
           .use(webpack.DefinePlugin, [{
             __UI_VERSION__: `'${require('../package.json').version}'`
           }])
-      }
+      },
+
     },
 
     devServer: {
